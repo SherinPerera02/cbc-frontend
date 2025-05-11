@@ -5,20 +5,14 @@ import ProductCard from './components/productCard'
 import HomePage from './pages/home'
 import LoginPage from './pages/login'
 import AdminPage from './pages/adminPage'
+import TestPage from './pages/testPage'
 import { Toaster } from 'react-hot-toast'
 import SignUpPage from './pages/signup'
-import RegisterPage from './pages/register'
 
 function App() {
  
 
   return (
-    <>
-       <Header/>
-       <ProductCard name="Apple Laptop" description="lorem sdaf sad sad " price="1000/=" picture="https://picsum.photos/id/2/200/300" />
-     
-       <ProductCard name="Gaming Laptop" description="lorem sdaf sad sad " price="1000/=" picture="https://picsum.photos/id/3/200/300" />
-    
     
     <BrowserRouter>
       <div >
@@ -27,12 +21,13 @@ function App() {
           <Route path="/" element={<HomePage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
           <Route path="/signup" element={<SignUpPage/>}/>
+          <Route path='/testing' element={<TestPage/>}/>
           <Route path='/admin/*' element={<AdminPage/>}/>
           <Route path='/*' element={<h1>404 Not Found</h1>}/>
         </Routes>
       </div>
     </BrowserRouter>
-    </>
+  
   )
 }
 
