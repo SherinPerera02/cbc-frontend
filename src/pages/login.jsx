@@ -1,22 +1,34 @@
 import axios from "axios"
 import { useState } from "react"
 import toast from "react-hot-toast"
+import { useNavigate } from "react-router-dom"
 
 export default function LoginPage(){
 
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+    const navigate = useNavigate()
 
     async function handleLogin(){
         try{
-            const response = await axios.post("http://localhost:5000/users/login" , {
+            const response = await axios.post(import.meta.env.VITE_BACKEND_URL+"/api/users/login" , {
+            
                 email:email,
                 password:password
-            })
+            }
+         )
             //alert("Login Successful")
             toast.success("Login Successful")
             console.log(response.data)
-        
+            localStorage.setItem("token",response.data.token)
+            //const token = localStorage.getItem("token")
+            
+            if(response.data.role === "admin"){
+                  navigate("/admin/")
+            }else{
+                  navigate("/")
+            }
+
         }catch(e){
             //alert(e.response.data.message)
             toast.error(e.response.data.message)
@@ -24,13 +36,9 @@ export default function LoginPage(){
         
 
     }
-}
+
 
     return(
-        <div className="w-full h-screen bg-red-100 flex flex-col justify-evenly items-center">
-            <h1 className="font-bold text-[30px] text-blue-700">Crystal Beauty Clear</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi sit, corporis ratione vel ullam provident expedita temporibus tempora repellendus magnam dolores commodi dicta enim eius consequuntur iste nemo voluptas assumenda.</p>
-            <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Login</button>
         <div className="w-full h-screen bg-[url('/login.jpg')] bg-center bg-cover flex  justify-evenly items-center">
           <div className="w-[50%] h-full ">
 
@@ -63,6 +71,5 @@ export default function LoginPage(){
 
           </div>
         </div>
-    </div>
-    
     )
+}

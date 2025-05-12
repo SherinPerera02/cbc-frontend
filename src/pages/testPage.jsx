@@ -5,10 +5,6 @@ export default function TestPage(){
     const [count,setCount] = useState(0)
     const [status , setStatus] = useState("Passed")
 
-    
-
- 
-
     return(
         <div className="w-full h-screen  flex justify-center items-center flex-col">
             <div className="w-[450px] h-[250px] shadow flex justify-center items-center">
