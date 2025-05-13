@@ -31,5 +31,5 @@ function App() {
 }
 
 export default App
-//https://neygxadcgdpkbeaezfjc.supabase.co
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5leWd4YWRjZ2Rwa2JlYWV6ZmpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY2MjUxODMsImV4cCI6MjA2MjIwMTE4M30.IpS34HF5ouG-5qPOavCyqCJdOV-sbhkLfmV04z36Fnc
+//https://kfkwemmdbjfftxlntlcy.supabase.co
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtma3dlbW1kYmpmZnR4bG50bGN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcxMDMwNTUsImV4cCI6MjA2MjY3OTA1NX0._BR5wCdFzGNcziOzr__v01HRymIENyl28BoDaqyaOvw
